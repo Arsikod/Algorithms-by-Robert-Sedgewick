@@ -2,13 +2,11 @@ using System.Collections.Generic;
 
 public class Stack<Item> : IEnumerable<Item>
 {
-
   //create a nested Node class
   private class Node
   {
     public Item data; //value of Node object
     public Node next; //next element in stack
-
   }
 
   //number of items in the stack
@@ -38,9 +36,8 @@ public class Stack<Item> : IEnumerable<Item>
       throw new IndexOutOfRangeException("Stack underflow");
     }
 
-    var popped = first; //save to return
+    var popped = first.data; //save to return
     first = first.next; //second item in stack becomes first
-
     return popped;
   }
 
@@ -54,9 +51,5 @@ public class Stack<Item> : IEnumerable<Item>
     first.next = oldFirst;
 
     Size++;
-
   }
-
-
-
 }
