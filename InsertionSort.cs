@@ -7,9 +7,9 @@ public class Insertion : IComparable
 
     for (int i = 0; i < numberOfItems; i++)
     {
-      for (int j = i; j > 0; j--) //j equals to i = iteration number, and keeps getting smaller by 1
+      for (int j = i; j > 0; j--) //this loop keeps going untill reaches !j>0 condition
       {
-        if (Less(array[j], array[i]))
+        if (Less(array[j], array[j - 1]))
         {
           Exch(array, j, j - 1);
         }
