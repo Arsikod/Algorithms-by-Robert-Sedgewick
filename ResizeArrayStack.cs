@@ -7,7 +7,7 @@ namespace Algs4
     private Item[] arrayOfItems; //declare array with generic type
     private int numberOfElements; //number of elements in stack
 
-    //initialize empty stack with certain capacity(hack)
+    //initialize empty stack with array of size 1
     public ResizedArrayStack()
     {
       arrayOfItems = new Item[1];
@@ -20,6 +20,7 @@ namespace Algs4
       get { return numberOfElements == 0; }
     }
 
+    //do the resizing but make sure that it does not happen frequently
     public void Resize(int capacity)
     {
 

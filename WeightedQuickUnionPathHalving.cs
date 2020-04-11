@@ -28,7 +28,7 @@ public class WeightedQuickUnionWithPathHalving
     while (i != id[i])
     {
       id[i] = id[id[i]]; //path halving
-      i = id[i]; //bring number to its id = root
+      i = id[i]; //keep going up to root
     }
 
     return i; //returns a root of an element

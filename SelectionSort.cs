@@ -16,8 +16,8 @@ public class Selection : IComparable
         {
           min = j;
         }
-        Exch(array, i, min);
       }
+        Exch(array, i, min);
     }
 
 
